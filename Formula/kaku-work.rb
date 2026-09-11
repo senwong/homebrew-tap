@@ -1,8 +1,8 @@
 class KakuWork < Formula
   desc "Restore Kaku tabs and Claude Code sessions on macOS"
   homepage "https://github.com/senwong/kaku-work"
-  url "https://github.com/senwong/kaku-work/releases/download/v0.1.0/kaku-work-0.1.0-macos.tar.gz"
-  sha256 "7888ebd5501b0235c2b3a67f2f683738d2f49dce494d8a940cb60b7c4cabfe83"
+  url "https://github.com/senwong/kaku-work/releases/download/v0.1.1/kaku-work-0.1.1-macos.tar.gz"
+  sha256 "8a41ad66f5a09dfb56135f3a228ecf94518b5e75be3fedac06f63dbec373e43f"
   license "MIT"
 
   depends_on :macos
@@ -36,7 +36,7 @@ class KakuWork < Formula
   end
 
   test do
-    assert_equal "kaku-work 0.1.0", shell_output("#{bin}/kaku-work --version").strip
+    assert_equal "kaku-work 0.1.1", shell_output("#{bin}/kaku-work --version").strip
     assert_match "restore", shell_output("#{bin}/kaku-work --help")
     assert_match "--uninstall", shell_output("#{bin}/kaku-work-setup --help")
   end
